@@ -9,14 +9,14 @@
 
     <input type="file" id="file-input">
     <p id="status">Please select a file</p>
-    <a href="#">Download report</a>
+    <a id='download-url' href="#">Download report</a>
 
     <h2>Your information</h2>
 
     <form method="POST" action="/submit-form/">
       <input type="hidden" id="report-url" name="report-url" value="#">
-      <input type="text" name="student" placeholder="Studen Name"><br>
-      <input type="text" name="reporting_period" placeholder="Reporting Period"><br><br>
+      <input type="text" name="student" placeholder="Student Name"><br>
+      <input type="text" name="reporting-period" placeholder="Reporting Period"><br><br>
 
       <hr>
       <h2>Save changes</h2>
@@ -44,7 +44,7 @@
       xhr.onreadystatechange = () => {
         if(xhr.readyState === 4){
           if(xhr.status === 200 || xhr.status === 204){
-            document.getElementById('preview').href = url;
+            document.getElementById('download-url').href = url;
             document.getElementById('report-url').value = url;
           }
           else{
