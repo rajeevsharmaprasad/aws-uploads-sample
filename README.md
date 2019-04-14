@@ -1,4 +1,4 @@
-# AWS Direct Upload Sample
+# AWS Direct Upload
 
 Simple example demonstrating how to accomplish a direct upload to Amazon S3 in a Python Flask application.
 
